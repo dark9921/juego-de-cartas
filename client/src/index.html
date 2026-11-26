@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Cartas DAW</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/combat.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/api.js" defer></script>
+</head>
+<body>
+    <main id="game-board">
+
+        <!-- Enemigo -->
+        <section class="panel enemy-area">
+            <div class="panel-head">
+                <h2 id="enemy-name">Enemigo</h2>
+                <span id="enemy-element" class="tag">Elemento: -</span>
+            </div>
+            <p class="stat">Vida <strong id="enemy-hp">50 / 50</strong></p>
+        </section>
+
+        <!-- Log de combate -->
+        <div id="combat-log" role="status" aria-live="polite">
+            Elige tu mazo para comenzar la partida
+        </div>
+
+        <!-- Jugador -->
+        <section class="panel player-area">
+            <div class="panel-head">
+                <h2>Jugador</h2>
+                <span id="player-element" class="tag">Elemento: -</span>
+            </div>
+
+            <div class="stats">
+                <p class="stat">Vida <strong id="player-hp">60 / 60</strong></p>
+                <p class="stat">Escudo <strong id="player-shield">0</strong></p>
+                <p class="stat">Maná <strong id="player-mana">3 / 5</strong></p>
+            </div>
+
+            <p id="player-buff" class="buff"></p>
+
+            <div class="piles">
+                <span id="deck-count">Mazo: 0</span>
+                <span id="discard-count">Descarte: 0</span>
+            </div>
+
+            <!-- Cartas en mano -->
+            <div id="player-hand"></div>
+
+            <!-- Controles -->
+            <div class="controls">
+                <div class="deck-select">
+                    <button id="btn-start-fire" class="btn fire">Mazo Fuego</button>
+                    <button id="btn-start-water" class="btn water">Mazo Agua</button>
+                    <button id="btn-start-plant" class="btn plant">Mazo Planta</button>
+                </div>
+                <button id="btn-end-turn" class="btn primary" disabled>Terminar turno</button>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
